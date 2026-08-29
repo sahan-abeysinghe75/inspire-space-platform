@@ -1,0 +1,239 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', 'Noto Sans Sinhala', system-ui, sans-serif;
+
+  /* ── Cosmic Brand Colors ──────────────────────────── */
+  /* Deep Space Indigo — Trust, depth, cosmos */
+  --color-space-950: #0a0814;
+  --color-space-900: #0f0c22;
+  --color-space-800: #1a1540;
+  --color-space-700: #231d5c;
+  --color-space-600: #312e81;
+  --color-space-500: #4338ca;
+  --color-space-400: #6366f1;
+  --color-space-300: #a5b4fc;
+  --color-space-200: #c7d2fe;
+  --color-space-100: #e0e7ff;
+  --color-space-50:  #eef2ff;
+
+  /* Electric Violet — Wonder, creativity, imagination */
+  --color-violet-brand: #7c3aed;
+  --color-violet-light: #8b5cf6;
+  --color-violet-glow:  #a78bfa;
+
+  /* Warm Amber / Gold — Achievement, energy, warmth */
+  --color-amber-brand: #d97706;
+  --color-amber-light: #f59e0b;
+  --color-amber-glow:  #fbbf24;
+  --color-amber-pale:  #fffbeb;
+
+  /* Cosmic Teal — Tech, intelligence, clarity (Inspire Tech) */
+  --color-teal-brand: #0891b2;
+  --color-teal-light: #06b6d4;
+  --color-teal-glow:  #67e8f9;
+
+  /* Astro Purple — Deep cosmos (Inspire Astro) */
+  --color-astro-brand: #6d28d9;
+  --color-astro-light: #7c3aed;
+  --color-astro-glow:  #c4b5fd;
+
+  /* Neutrals */
+  --color-background:    #f5f6ff;   /* faint cosmic tint */
+  --color-surface:       #ffffff;
+  --color-surface-2:     #f0f1ff;
+  --color-border:        #e2e4f0;
+  --color-text:          #1e1b4b;   /* deep indigo text */
+  --color-text-muted:    #64748b;
+}
+
+/* ── Google Fonts ────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* ── Base ────────────────────────────────────────── */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #f5f6ff;
+    color: #1e1b4b;
+    min-height: 100vh;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  ::selection {
+    background: rgba(124, 58, 237, 0.25);
+    color: #1e1b4b;
+  }
+
+  :focus-visible {
+    outline: 2px solid #7c3aed;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #1e1b4b;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* ── Utilities ───────────────────────────────────── */
+@layer utilities {
+
+  /* Glass card — light cosmic surface */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.90);
+    backdrop-filter: blur(12px) saturate(140%);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+    border: 1px solid rgba(165, 180, 252, 0.25);
+    box-shadow: 0 4px 24px -8px rgba(99, 102, 241, 0.08);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .glass-card:hover {
+    background: rgba(255, 255, 255, 1);
+    border-color: rgba(124, 58, 237, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 20px 48px -12px rgba(99, 102, 241, 0.18);
+  }
+
+  /* Solid brand text — clean and highly readable */
+  .text-gradient {
+    color: #4338ca; /* Deep Indigo */
+  }
+
+  .text-gradient-warm {
+    color: #0f172a; /* Slate 900 */
+  }
+
+  /* Primary CTA button — solid professional indigo */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.875rem;
+    padding: 0.75rem 1.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    background: #4f46e5;
+    color: #ffffff;
+    border: 1px solid transparent;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .btn-primary:hover {
+    background: #4338ca;
+    box-shadow: 0 6px 16px rgba(67, 56, 202, 0.3);
+    transform: translateY(-1px);
+  }
+
+  .btn-primary:active {
+    transform: scale(0.97);
+  }
+
+  /* Secondary button — ghost cosmic */
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.875rem;
+    padding: 0.75rem 1.75rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.9);
+    color: #4338ca;
+    border: 1.5px solid rgba(99, 102, 241, 0.3);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .btn-secondary:hover {
+    background: rgba(240, 241, 255, 1);
+    border-color: rgba(99, 102, 241, 0.6);
+    color: #3730a3;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px -6px rgba(99, 102, 241, 0.2);
+  }
+
+  /* Glow effect for accents */
+  .glow-violet {
+    box-shadow: 0 0 24px rgba(124, 58, 237, 0.35);
+  }
+
+  .glow-amber {
+    box-shadow: 0 0 24px rgba(245, 158, 11, 0.35);
+  }
+
+  /* Section backgrounds */
+  .bg-cosmic {
+    background-color: #f8fafc; /* Clean slate 50 */
+  }
+
+  .bg-cosmic-dark {
+    background-color: #0f172a; /* Solid slate 900 */
+  }
+
+  /* Orbital ring decoration */
+  .orbital-ring {
+    border: 1.5px solid rgba(99, 102, 241, 0.25);
+    border-radius: 50%;
+    animation: orbit-spin 12s linear infinite;
+  }
+
+  @keyframes orbit-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* Pulse glow animation */
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  /* Star field dots */
+  .star-dot {
+    width: 2px;
+    height: 2px;
+    background: rgba(165, 180, 252, 0.6);
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  /* Astro init accent */
+  .accent-astro {
+    color: #7c3aed;
+    background-color: rgba(124, 58, 237, 0.08);
+    border-color: rgba(124, 58, 237, 0.2);
+  }
+
+  /* Tech init accent */
+  .accent-tech {
+    color: #0891b2;
+    background-color: rgba(8, 145, 178, 0.08);
+    border-color: rgba(8, 145, 178, 0.2);
+  }
+}
