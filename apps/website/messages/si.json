@@ -348,6 +348,14 @@
       "button2": "View All Initiatives"
     }
   },
+  "science": {
+    "title": "Inspire Science",
+    "tag": "Science Education & Research",
+    "subtitle": "විද්‍යාත්මක පර්යේෂණ සහ අධ්‍යාපනය",
+    "mission": "To advance scientific literacy and foster a deep appreciation for the natural sciences through hands-on education, practical experiments, and community engagement.",
+    "focusAreas": "අවධානය යොමු කරන අංශ",
+    "programs": "වැඩසටහන්"
+  },
   "knowledge": {
     "title": "දැනුම මධ්‍යස්ථානය",
     "subtitle": "ඔබව දිරිගැන්වීමට සහ දැනුවත් කිරීමට සකස් කරන ලද සම්පත්, ලිපි සහ මාර්ගෝපදේශ ගවේෂණය කරන්න.",

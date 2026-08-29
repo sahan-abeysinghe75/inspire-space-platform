@@ -198,6 +198,14 @@
       "button2": "View All Initiatives"
     }
   },
+  "science": {
+    "title": "Inspire Science",
+    "tag": "Science Education & Research",
+    "subtitle": "Empowering the next generation of scientists, researchers, and innovators.",
+    "mission": "To advance scientific literacy and foster a deep appreciation for the natural sciences through hands-on education, practical experiments, and community engagement.",
+    "focusAreas": "Focus Areas",
+    "programs": "Signature Programs"
+  },
   "knowledge": {
     "title": "Knowledge Center",
     "subtitle": "Explore our curated collection of resources, articles, and guides designed to inspire and educate.",
