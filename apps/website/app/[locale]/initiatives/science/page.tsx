@@ -8,7 +8,6 @@ export async function generateMetadata() {
 export default async function InspireSciencePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   setRequestLocale(locale)
-  const t = await getTranslations('science')
 
   const focusAreas = [
     { icon: '⚛️', label: 'Physics' },
