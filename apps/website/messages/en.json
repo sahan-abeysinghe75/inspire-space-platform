@@ -1,0 +1,271 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "initiatives": "Initiatives",
+    "astro": "Inspire Astro",
+    "tech": "Inspire Tech",
+    "programs": "Programs",
+    "knowledge": "Knowledge",
+    "gallery": "Gallery",
+    "events": "Events",
+    "contact": "Contact",
+    "astro_tag": "FOADS",
+    "astro_desc": "Astronomy, space sciences & public outreach",
+    "tech_tag": "Technology & Innovation",
+    "tech_desc": "Programming, AI, robotics & cybersecurity"
+  },
+  "home": {
+    "badge": "Sri Lanka's STEM Education Platform",
+    "hero": {
+      "title": "Welcome to",
+      "brand": "Inspire Space",
+      "subtitle": "Embark on a journey through the cosmos of knowledge. Discover our premier STEM initiatives designed to spark curiosity and power the next generation of innovators.",
+      "cta1": "Discover Our Mission",
+      "cta2": "Explore Initiatives"
+    },
+    "initiatives": {
+      "heading": "Our Core Initiatives",
+      "subheading": "Dive into our specialized learning tracks tailored for future astronomers, engineers, and tech pioneers.",
+      "astro": {
+        "name": "Inspire Astro",
+        "tag": "Astronomy",
+        "desc": "Explore the wonders of the universe. From planetary science to astrophysics, our Astro initiative provides immersive learning experiences about space exploration and celestial mechanics.",
+        "cta": "Launch Astro Journey"
+      },
+      "tech": {
+        "name": "Inspire Tech",
+        "tag": "Engineering",
+        "desc": "Build the future with robotics, coding, and engineering. The Tech initiative equips students with hands-on skills in software development, AI, and hardware design.",
+        "cta": "Enter the Tech Lab"
+      }
+    },
+    "platform": {
+      "heading": "Platform Features",
+      "features": {
+        "curricula": { "title": "Interactive Curricula", "desc": "Engaging lessons designed by STEM educators to maximize retention." },
+        "labs": { "title": "Virtual Labs", "desc": "Safe, simulated environments to conduct experiments and test theories." },
+        "community": { "title": "Community Driven", "desc": "Collaborate with peers, join study groups, and participate in challenges." },
+        "tracking": { "title": "Progress Tracking", "desc": "Detailed analytics to monitor skill acquisition and learning milestones." }
+      }
+    },
+    "cta": {
+      "heading": "Ready to ignite your potential?",
+      "sub": "Join thousands of students across the globe who are shaping the future through STEM.",
+      "button": "Create Free Account"
+    }
+  },
+  "about": {
+    "title": "About Inspire Space",
+    "subtitle": "Our story, mission, and the vision driving Sri Lanka's STEM education forward",
+    "who": {
+      "heading": "Who We Are",
+      "body": "Inspire Space is a leading STEM education platform that bridges the gap between theoretical knowledge and practical application. We bring together passionate educators, industry experts, and eager learners."
+    },
+    "mission": {
+      "heading": "Our Mission",
+      "body": "To ignite curiosity and foster innovation by providing world-class STEM education that is accessible to everyone. We strive to create an inclusive environment where every student can discover their potential."
+    },
+    "vision": {
+      "heading": "Our Vision",
+      "body": "A future where every young mind is equipped with the knowledge, skills, and confidence to tackle complex global challenges and lead humanity's next great discoveries."
+    },
+    "hero": {
+      "tag": "About Inspire Space",
+      "title": "Empowering the Next Generation of Innovators",
+      "subtitle": "We are dedicated to making STEM education accessible, engaging, and impactful for students everywhere through our specialized programs."
+    },
+    "pillars": {
+      "heading": "What Sets Us Apart",
+      "subheading": "Our approach to education is built on four core pillars that ensure a comprehensive and engaging learning experience.",
+      "items": {
+        "expert": { "title": "Expert Instruction", "desc": "Learn from industry professionals and passionate educators dedicated to your success." },
+        "handsOn": { "title": "Hands-on Learning", "desc": "Apply theoretical knowledge through practical projects, workshops, and real-world challenges." },
+        "community": { "title": "Community Driven", "desc": "Join a vibrant community of learners, collaborate on projects, and build lasting connections." },
+        "future": { "title": "Future Ready", "desc": "Equip yourself with the skills and knowledge needed to thrive in tomorrow's technological landscape." }
+      }
+    },
+    "initiativesSection": {
+      "heading": "Our Initiatives",
+      "subheading": "Choose your path and dive deep into specialized fields of study with our focused programs.",
+      "astro": {
+        "title": "Inspire Astro",
+        "desc": "Explore the universe with our comprehensive astronomy program. Learn about celestial bodies, space exploration, and the physics of the cosmos."
+      },
+      "tech": {
+        "title": "Inspire Tech",
+        "desc": "Dive into the world of technology. Master programming, robotics, artificial intelligence, and digital innovation."
+      },
+      "cta": "Explore Programs"
+    },
+    "initiatives": "Our Initiatives"
+  },
+  "programs": {
+    "title": "Our Programs",
+    "subtitle": "Discover our comprehensive range of educational initiatives designed to inspire the next generation of innovators.",
+    "astroPrograms": [
+      { "title": "Star Party", "desc": "Join us for an evening of stargazing and discovering the wonders of the night sky." },
+      { "title": "Astrophotography Workshop", "desc": "Learn the techniques and equipment needed to capture stunning images of celestial objects." },
+      { "title": "Space Science Education", "desc": "Interactive sessions covering fundamental concepts of astronomy and space exploration." },
+      { "title": "Telescope Training", "desc": "Hands-on training on how to set up, operate, and maintain various types of telescopes." }
+    ],
+    "techPrograms": [
+      { "title": "Robotics Bootcamp", "desc": "Build and program your own robots in this intensive, hands-on workshop." },
+      { "title": "AI Workshop", "desc": "Explore the basics of Artificial Intelligence and Machine Learning with real-world applications." },
+      { "title": "Cybersecurity Training", "desc": "Learn essential skills to protect systems, networks, and programs from digital attacks." },
+      { "title": "Cloud Computing Essentials", "desc": "Discover the fundamentals of cloud infrastructure and modern computing platforms." }
+    ],
+    "cta": {
+      "heading": "Ready to Inspire?",
+      "sub": "Book a program for your school, community center, or organization and bring the wonders of STEM directly to your audience.",
+      "button": "Request a Program"
+    }
+  },
+  "astro": {
+    "title": "Inspire Astro",
+    "tag": "Foundation for Observational Astronomy and Development of Space Sciences (FOADS)",
+    "subtitle": "Advancing astronomy education, observational astronomy, and space science awareness across Sri Lanka.",
+    "heroTag": "An Inspire Space Initiative",
+    "programsBtn": "Explore Programs",
+    "learnMoreBtn": "Learn More",
+    "missionHeading": "Our Mission",
+    "mission": "To inspire and educate communities through astronomy and space sciences by providing accessible, engaging, and high-quality educational experiences that promote scientific curiosity, critical thinking, and lifelong learning.",
+    "focusAreasHeading": "Focus Areas",
+    "focusAreasSub": "Discover the core domains of astronomical research and education we cover.",
+    "focusAreasList": [
+      { "title": "Stellar Evolution", "desc": "Understanding the lifecycle of stars." },
+      { "title": "Exoplanets", "desc": "Discovering worlds beyond our solar system." },
+      { "title": "Cosmology", "desc": "Studying the origins and evolution of the universe." },
+      { "title": "Radio Astronomy", "desc": "Exploring the cosmos through radio waves." },
+      { "title": "Astrophysics", "desc": "Applying physics to celestial phenomena." },
+      { "title": "Space Weather", "desc": "Monitoring solar activity and its impacts." },
+      { "title": "Astrobiology", "desc": "Searching for life in the universe." },
+      { "title": "Observational Astronomy", "desc": "Mapping the night sky." }
+    ],
+    "programsHeading": "Current Programs",
+    "programsSub": "Engage with our active learning modules.",
+    "viewAllPrograms": "View All Programs →",
+    "programsList": [
+      { "name": "Telescope Network", "level": "Beginner", "duration": "Ongoing" },
+      { "name": "Data Analysis Lab", "level": "Advanced", "duration": "12 Weeks" },
+      { "name": "Virtual Observatory", "level": "Intermediate", "duration": "8 Weeks" },
+      { "name": "Meteor Tracking", "level": "All Levels", "duration": "Seasonal" },
+      { "name": "Dark Sky Preservation", "level": "Community", "duration": "Continuous" },
+      { "name": "Student Research Projects", "level": "Advanced", "duration": "Academic Year" }
+    ],
+    "learnMoreInline": "Learn more",
+    "cta": {
+      "heading": "Ready to Look Up?",
+      "sub": "Join the Inspire Astro community today and start your journey through the cosmos with our educational resources and global network.",
+      "button": "Join Inspire Astro"
+    },
+    "knowledge": "Astronomy Resources",
+    "gallery": "Photo Gallery"
+  },
+  "tech": {
+    "title": "Inspire Tech",
+    "tag": "Technology & Innovation Education",
+    "subtitle": "Empowering the next generation of technologists, builders, and digital innovators to create the future.",
+    "heroTag": "An Inspire Space Initiative",
+    "missionHeading": "Our Mission",
+    "mission": "To bridge the digital divide and foster technological literacy by providing accessible, cutting-edge education in software, systems, and emerging technologies. We believe that coding and technical skills are the ultimate tools for problem-solving in the modern world.",
+    "focusAreasHeading": "Core Focus Areas",
+    "focusAreasList": [
+      { "title": "Software Engineering", "desc": "Building robust applications and systems." },
+      { "title": "Artificial Intelligence", "desc": "Exploring machine learning and neural networks." },
+      { "title": "Cybersecurity", "desc": "Protecting digital assets and infrastructure." },
+      { "title": "Data Science", "desc": "Analyzing complex data to drive decisions." },
+      { "title": "Cloud Computing", "desc": "Architecting scalable cloud solutions." },
+      { "title": "Internet of Things", "desc": "Connecting devices and smart systems." },
+      { "title": "Web Development", "desc": "Creating responsive and dynamic websites." },
+      { "title": "Mobile Development", "desc": "Designing native and cross-platform apps." },
+      { "title": "Game Development", "desc": "Crafting immersive interactive experiences." },
+      { "title": "Blockchain Tech", "desc": "Developing decentralized applications." }
+    ],
+    "programsHeading": "Signature Programs",
+    "programsList": [
+      { "title": "Coding Bootcamps", "desc": "Intensive 12-week programs to jumpstart your programming career." },
+      { "title": "Hackathons", "desc": "Weekend-long coding challenges to build innovative solutions." },
+      { "title": "Tech Mentorship", "desc": "1-on-1 guidance from industry professionals." },
+      { "title": "Open Source Labs", "desc": "Contribute to real-world open source projects." },
+      { "title": "AI Research Grants", "desc": "Funding for student-led artificial intelligence research." },
+      { "title": "Tech Career Fairs", "desc": "Connect with top technology companies for internships and jobs." }
+    ],
+    "cta": {
+      "heading": "Ready to Build the Future?",
+      "sub": "Join our community of student developers, designers, and tech enthusiasts. Start your journey in technology today.",
+      "button1": "Join Inspire Tech",
+      "button2": "View All Initiatives"
+    }
+  },
+  "knowledge": {
+    "title": "Knowledge Center",
+    "subtitle": "Explore our curated collection of resources, articles, and guides designed to inspire and educate.",
+    "tagGeneral": "General",
+    "tagAstro": "Inspire Astro",
+    "tagTech": "Inspire Tech",
+    "articles": "Articles",
+    "articlesDesc": "Read our latest articles, educational insights, and stories on STEM exploration.",
+    "skyGuide": "Monthly Sky Guide",
+    "skyGuideDesc": "Your complete guide to the night sky, featuring constellations, planets, and upcoming celestial events.",
+    "downloads": "Downloads",
+    "downloadsDesc": "Access a growing library of downloadable resources, worksheets, and educational materials.",
+    "faqs": "FAQs",
+    "faqsDesc": "Find quick answers to commonly asked questions about our platforms, programs, and initiatives.",
+    "explore": "Explore",
+    "note": "Note: Content in the Knowledge Center is organized by initiative. Look for the tags to find specific resources.",
+    "readMore": "Read More",
+    "downloadFile": "Download",
+    "noContent": "Coming soon. We are working on exciting content for this section!"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "Moments from our programs, events, and outreach activities",
+    "noImages": "No images yet. Check back soon."
+  },
+  "events": {
+    "title": "Request an Event",
+    "subtitle": "Bring Inspire Space programs to your school, university, or community",
+    "form": {
+      "organization": "Organisation Name",
+      "contactName": "Contact Person",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "eventDate": "Preferred Event Date",
+      "eventType": "Type of Event",
+      "description": "Event Description",
+      "submit": "Submit Request",
+      "submitting": "Submitting...",
+      "successTitle": "Request Submitted!",
+      "successMessage": "Thank you! We will contact you within 2–3 business days.",
+      "errorMessage": "Something went wrong. Please try again."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with Inspire Space"
+  },
+  "footer": {
+    "tagline": "A unified STEM education platform advancing astronomy and technology across Sri Lanka.",
+    "inspire": "Inspire Space",
+    "initiatives": "Initiatives",
+    "knowledge": "Knowledge",
+    "connect": "Connect",
+    "knowledgeCenter": "Knowledge Center",
+    "articles": "Articles",
+    "learningPlatform": "Learning Platform",
+    "copyright": "Inspire Space · inspirespacesl.org",
+    "taglineShort": "Sri Lanka's STEM Education Platform"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "notFound": "Page not found",
+    "backToHome": "Back to Home",
+    "learnMore": "Learn More",
+    "viewAll": "View All",
+    "page": "Page",
+    "of": "of",
+    "comingSoon": "Coming Soon"
+  }
+}

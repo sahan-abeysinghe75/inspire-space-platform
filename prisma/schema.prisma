@@ -1,0 +1,230 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// Astro Digital Platform — Prisma Schema
+// ─────────────────────────────────────────────────────────────────────────────
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── Enums ───────────────────────────────────────────────────────────────────
+
+enum Role {
+  SUPER_ADMIN
+  ADMIN
+  INSTRUCTOR
+  CONTENT_EDITOR
+  STUDENT
+}
+
+enum EventRequestStatus {
+  PENDING
+  CONTACTED
+  CONFIRMED
+  COMPLETED
+  CANCELLED
+}
+
+enum ContentStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum DownloadType {
+  PDF
+  POSTER
+  OTHER
+}
+
+// ─── Auth.js Required Tables ─────────────────────────────────────────────────
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  emailVerified DateTime?
+  image         String?
+  password      String?   // hashed, for email/password auth
+  role          Role      @default(STUDENT)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  accounts Account[]
+  sessions Session[]
+
+  @@map("users")
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@map("accounts")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
+
+model VerificationToken {
+  identifier String
+  token      String
+  expires    DateTime
+
+  @@unique([identifier, token])
+  @@map("verification_tokens")
+}
+
+// ─── Knowledge Center ─────────────────────────────────────────────────────────
+
+model Article {
+  id          String        @id @default(cuid())
+  slug        String        @unique
+  titleEn     String
+  titleSi     String
+  excerptEn   String?       @db.Text
+  excerptSi   String?       @db.Text
+  contentEn   String        @db.Text
+  contentSi   String        @db.Text
+  coverImage  String?       // R2 key
+  category    ArticleCategory @default(ARTICLE)
+  status      ContentStatus @default(DRAFT)
+  publishedAt DateTime?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  @@index([status, publishedAt])
+  @@index([slug])
+  @@map("articles")
+}
+
+enum ArticleCategory {
+  ARTICLE
+  NEWS
+  OBSERVATION_GUIDE
+}
+
+model SkyGuide {
+  id        String        @id @default(cuid())
+  month     Int           // 1–12
+  year      Int
+  titleEn   String
+  titleSi   String
+  contentEn String        @db.Text
+  contentSi String        @db.Text
+  coverImage String?      // R2 key
+  status    ContentStatus @default(DRAFT)
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+
+  @@unique([month, year])
+  @@map("sky_guides")
+}
+
+model Download {
+  id          String       @id @default(cuid())
+  titleEn     String
+  titleSi     String
+  descriptionEn String?   @db.Text
+  descriptionSi String?   @db.Text
+  fileKey     String       // R2 key
+  fileSize    Int?         // bytes
+  fileType    DownloadType @default(PDF)
+  status      ContentStatus @default(DRAFT)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  @@map("downloads")
+}
+
+model Faq {
+  id          String        @id @default(cuid())
+  questionEn  String
+  questionSi  String
+  answerEn    String        @db.Text
+  answerSi    String        @db.Text
+  order       Int           @default(0)
+  status      ContentStatus @default(DRAFT)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  @@map("faqs")
+}
+
+// ─── Gallery ─────────────────────────────────────────────────────────────────
+
+model GalleryImage {
+  id          String        @id @default(cuid())
+  titleEn     String?
+  titleSi     String?
+  altEn       String?
+  altSi       String?
+  imageKey    String        // R2 key
+  thumbnailKey String?      // R2 thumbnail key
+  order       Int           @default(0)
+  status      ContentStatus @default(DRAFT)
+  takenAt     DateTime?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  @@map("gallery_images")
+}
+
+// ─── Event Requests ──────────────────────────────────────────────────────────
+
+model EventRequest {
+  id           String             @id @default(cuid())
+  organization String
+  contactName  String
+  email        String
+  phone        String
+  eventDate    DateTime
+  eventType    String
+  description  String             @db.Text
+  status       EventRequestStatus @default(PENDING)
+  adminNotes   String?            @db.Text
+  createdAt    DateTime           @default(now())
+  updatedAt    DateTime           @updatedAt
+
+  @@index([status, createdAt])
+  @@map("event_requests")
+}
+
+// ─── CMS Static Pages ────────────────────────────────────────────────────────
+
+model SitePage {
+  id        String   @id @default(cuid())
+  key       String   @unique // e.g. "home", "about", "services", "contact"
+  titleEn   String
+  titleSi   String
+  contentEn Json     // flexible JSON for page sections
+  contentSi Json
+  updatedAt DateTime @updatedAt
+
+  @@map("site_pages")
+}
