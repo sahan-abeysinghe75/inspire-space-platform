@@ -3,21 +3,38 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 
+import { signIn } from 'next-auth/react'
+
 export default function AdminLoginForm() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
+  const router = useRouter()
   
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
     setError('')
     
-    // Uses NextAuth signIn (to be handled via credentials)
-    // We would import signIn from next-auth/react here if it's available on client
-    // For now, doing a standard fetch or simulated redirect
-    window.location.href = '/admin/dashboard'
+    try {
+      const res = await signIn('credentials', {
+        email,
+        password,
+        redirect: false,
+      })
+
+      if (res?.error) {
+        setError('Invalid email or password')
+        setLoading(false)
+      } else {
+        router.push('/admin/dashboard')
+        router.refresh()
+      }
+    } catch (err) {
+      setError('An error occurred during sign in')
+      setLoading(false)
+    }
   }
 
   return (
